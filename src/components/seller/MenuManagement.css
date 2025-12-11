@@ -1,0 +1,133 @@
+/* .form-hints {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .hint {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+  }
+  
+  .hint.warning {
+    color: #dd6b20;
+  }
+  
+  .hint.success {
+    color: #38a169;
+  }
+  
+  .btn-loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .loading-spinner.small {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @media (max-width: 768px) {
+    .menu-management {
+      padding: 1rem;
+    }
+  
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .product-card {
+      margin-bottom: 1rem;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+    }
+  
+    .form-actions .btn {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  } */
+  .form-hints {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.hint {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+}
+
+.hint.warning {
+    color: #dd6b20;
+}
+
+.hint.success {
+    color: #38a169;
+}
+
+.btn-loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.loading-spinner.small {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.5rem;
+    animation: none !important; /* Animation fully disabled */
+}
+
+/* Keyframes removed – animation disabled */
+/*
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+*/
+
+@media (max-width: 768px) {
+    .menu-management {
+        padding: 1rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        margin-bottom: 1rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

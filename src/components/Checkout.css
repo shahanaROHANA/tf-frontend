@@ -1,0 +1,1340 @@
+/* Modern Checkout Page Styles */
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.checkout-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.checkout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.back-btn {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border: 2px solid #e2e8f0;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #4a5568;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-btn:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.checkout-header h1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.checkout-steps {
+  display: flex;
+  gap: 1rem;
+}
+
+.step {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  color: #a0aec0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.step.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transform: scale(1.05);
+}
+
+.step.completed {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+}
+
+.error-message {
+  background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+  color: #c53030;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #feb2b2;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(254, 178, 178, 0.3);
+}
+
+.checkout-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.checkout-main {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.checkout-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.delivery-section h2,
+.payment-section h2 {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 0.75rem;
+}
+
+.delivery-type {
+  margin-bottom: 2.5rem;
+}
+
+.delivery-type label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.delivery-type select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.delivery-type select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: white;
+}
+
+.contact-info,
+.train-details,
+.station-details,
+.home-details,
+.special-instructions,
+.coupon-section,
+.order-instructions {
+  margin-bottom: 2.5rem;
+}
+
+.contact-info h3,
+.train-details h3,
+.station-details h3,
+.home-details h3,
+.special-instructions h3,
+.coupon-section h3,
+.order-instructions h3 {
+  color: #2d3748;
+  margin-bottom: 1.25rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.contact-info input,
+.train-details input,
+.station-details input,
+.home-details input,
+.home-details textarea,
+.special-instructions textarea,
+.coupon-input input,
+.order-instructions textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+  font-weight: 500;
+}
+
+.contact-info input:focus,
+.train-details input:focus,
+.station-details input:focus,
+.home-details input:focus,
+.home-details textarea:focus,
+.special-instructions textarea:focus,
+.coupon-input input:focus,
+.order-instructions textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: white;
+  transform: translateY(-1px);
+}
+
+.train-seat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.home-details textarea,
+.special-instructions textarea,
+.order-instructions textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.proceed-btn,
+.pay-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.proceed-btn:hover,
+.pay-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.proceed-btn:disabled,
+.pay-btn:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-option::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  transition: left 0.3s ease;
+}
+
+.payment-option:hover {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.payment-option:hover::before {
+  left: 0;
+}
+
+.payment-option input[type="radio"] {
+  margin-right: 1rem;
+  transform: scale(1.2);
+}
+
+.payment-option input[type="radio"]:checked + .payment-icon {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.5));
+}
+
+.payment-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  transition: all 0.2s ease;
+}
+
+.coupon-input {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.coupon-input input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.coupon-applied {
+  color: #38a169;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #9ae6b4;
+}
+
+.order-summary {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.order-summary h2 {
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.summary-items {
+  margin-bottom: 1.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.item-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.item-info p {
+  margin: 0.25rem 0;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.item-note {
+  font-style: italic;
+  color: #667eea !important;
+  font-weight: 500;
+}
+
+.item-price {
+  font-weight: 700;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.summary-totals {
+  border-top: 2px solid #e2e8f0;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.total-row.discount {
+  color: #38a169;
+  font-weight: 600;
+}
+
+.total-row.final {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #2d3748;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+  margin-top: 0.75rem;
+}
+
+.checkout-success {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: #38a169;
+  margin-bottom: 1.5rem;
+  animation: checkmark 0.8s ease-in-out;
+}
+
+@keyframes checkmark {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.checkout-success h2 {
+  color: #38a169;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.checkout-success p {
+  color: #718096;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.view-orders-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.view-orders-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Loading spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .checkout-sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .checkout-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .checkout-steps {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .checkout-main {
+    padding: 1.5rem;
+  }
+
+  .payment-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .train-seat {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-header h1 {
+    font-size: 2rem;
+  }
+
+  .step {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-content {
+    gap: 1rem;
+  }
+
+  .checkout-main,
+  .order-summary {
+    padding: 1rem;
+  }
+
+  .checkout-steps {
+    gap: 0.5rem;
+  }
+
+  .delivery-type select,
+  .contact-info input,
+  .train-details input,
+  .station-details input,
+  .home-details input,
+  .home-details textarea,
+  .special-instructions textarea,
+  .coupon-input input,
+  .order-instructions textarea {
+    font-size: 16px;
+  }
+}
+
+/* Focus states for accessibility */
+.payment-option:focus-within {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Enhanced Animations for Checkout Page */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.8), 0 0 30px rgba(102, 126, 234, 0.6);
+  }
+}
+
+@keyframes stepHighlight {
+  0%, 100% {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    color: #a0aec0;
+    transform: scale(1);
+  }
+  50% {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes formFieldFocus {
+  0% {
+    border-color: #e2e8f0;
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.1);
+    transform: scale(1);
+  }
+  50% {
+    border-color: #667eea;
+    box-shadow: 0 0 0 5px rgba(102, 126, 234, 0.1);
+    transform: scale(1.02);
+  }
+  100% {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: scale(1);
+  }
+}
+
+@keyframes paymentMethodSelect {
+  0% {
+    border-color: #e2e8f0;
+    background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+    transform: scale(1);
+  }
+  50% {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+    transform: scale(1.05);
+  }
+  100% {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+  }
+}
+
+@keyframes checkoutProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--progress-width);
+  }
+}
+
+@keyframes countUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Page load animations */
+.checkout-container {
+  animation: fadeInUp 0.6s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.checkout-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Header animations */
+.checkout-header {
+  animation: slideInFromLeft 0.8s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.back-btn {
+  animation: slideInFromLeft 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.back-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.back-btn:hover::before {
+  left: 100%;
+}
+
+.back-btn:hover {
+  animation: pulse 0.3s ease;
+  transform: translateY(-2px);
+}
+
+.checkout-header h1 {
+  animation: slideInFromRight 0.8s ease 0.2s both;
+  position: relative;
+}
+
+/* Step indicator animations */
+.checkout-steps {
+  animation: slideInFromBottom 0.6s ease 0.4s both;
+  display: flex;
+  gap: 1rem;
+}
+
+.step {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  color: #a0aec0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  animation: bounceIn 0.5s ease both;
+}
+
+.step:nth-child(1) { animation-delay: 0.6s; }
+.step:nth-child(2) { animation-delay: 0.8s; }
+.step:nth-child(3) { animation-delay: 1s; }
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.step.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  animation: stepHighlight 2s ease-in-out infinite;
+}
+
+.step.active::before {
+  left: 100%;
+}
+
+.step.completed {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  animation: bounceIn 0.5s ease;
+}
+
+/* Content animations */
+.checkout-content {
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.checkout-main {
+  animation: slideInFromLeft 0.6s ease 0.8s both;
+  position: relative;
+  overflow: hidden;
+}
+
+.checkout-sidebar {
+  animation: slideInFromRight 0.6s ease 1s both;
+  position: relative;
+}
+
+/* Section animations */
+.delivery-section,
+.payment-section {
+  animation: slideInFromBottom 0.6s ease;
+  position: relative;
+}
+
+.delivery-section h2,
+.payment-section h2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.delivery-section h2::after,
+.payment-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  animation: shimmer 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Form animations */
+.delivery-type,
+.contact-info,
+.train-details,
+.station-details,
+.home-details,
+.special-instructions,
+.coupon-section {
+  animation: slideInFromLeft 0.5s ease;
+  position: relative;
+}
+
+.delivery-type { animation-delay: 0.2s; }
+.contact-info { animation-delay: 0.3s; }
+.train-details { animation-delay: 0.4s; }
+.station-details { animation-delay: 0.4s; }
+.home-details { animation-delay: 0.4s; }
+.special-instructions { animation-delay: 0.5s; }
+.coupon-section { animation-delay: 0.6s; }
+
+.delivery-type::before,
+.contact-info::before,
+.train-details::before,
+.station-details::before,
+.home-details::before,
+.special-instructions::before,
+.coupon-section::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #667eea, #764ba2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.delivery-type:hover::before,
+.contact-info:hover::before,
+.train-details:hover::before,
+.station-details:hover::before,
+.home-details:hover::before,
+.special-instructions:hover::before,
+.coupon-section:hover::before {
+  opacity: 1;
+}
+
+/* Form field animations */
+.form-group {
+  animation: fadeInUp 0.4s ease;
+  position: relative;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.15s; }
+.form-group:nth-child(3) { animation-delay: 0.2s; }
+.form-group:nth-child(4) { animation-delay: 0.25s; }
+.form-group:nth-child(5) { animation-delay: 0.3s; }
+
+.contact-info input,
+.train-details input,
+.station-details input,
+.home-details input,
+.home-details textarea,
+.special-instructions textarea,
+.coupon-input input,
+.order-instructions textarea {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contact-info input:focus,
+.train-details input:focus,
+.station-details input:focus,
+.home-details input:focus,
+.home-details textarea:focus,
+.special-instructions textarea:focus,
+.coupon-input input:focus,
+.order-instructions textarea:focus {
+  animation: formFieldFocus 0.5s ease;
+  transform: translateY(-2px);
+}
+
+/* Train seat grid animation */
+.train-seat {
+  animation: slideInFromBottom 0.4s ease 0.3s both;
+}
+
+/* Payment method animations */
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  animation: slideInFromBottom 0.6s ease 0.4s both;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  animation: bounceIn 0.5s ease both;
+}
+
+.payment-option:nth-child(1) { animation-delay: 0.5s; }
+.payment-option:nth-child(2) { animation-delay: 0.6s; }
+.payment-option:nth-child(3) { animation-delay: 0.7s; }
+
+.payment-option::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  transition: left 0.3s ease;
+}
+
+.payment-option:hover {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+  animation: pulse 0.3s ease;
+}
+
+.payment-option:hover::before {
+  left: 0;
+}
+
+.payment-option input[type="radio"]:checked + .payment-icon {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.5));
+  animation: pulse 0.5s ease;
+}
+
+.payment-option input[type="radio"]:checked ~ * {
+  animation: paymentMethodSelect 0.3s ease;
+}
+
+/* Button animations */
+.proceed-btn,
+.pay-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.proceed-btn::before,
+.pay-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.proceed-btn:hover::before,
+.pay-btn:hover::before {
+  left: 100%;
+}
+
+.proceed-btn:hover,
+.pay-btn:hover {
+  animation: pulse 0.3s ease;
+  transform: translateY(-3px);
+}
+
+.proceed-btn:disabled,
+.pay-btn:disabled {
+  animation: fadeInUp 0.3s ease;
+}
+
+/* Order summary animations */
+.order-summary {
+  animation: slideInFromRight 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-summary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.order-summary:hover::before {
+  opacity: 1;
+}
+
+.summary-items {
+  animation: slideInFromBottom 0.5s ease 0.2s both;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  animation: slideInFromLeft 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.3s ease;
+}
+
+.summary-item:hover::before {
+  left: 100%;
+}
+
+.summary-item:nth-child(1) { animation-delay: 0.3s; }
+.summary-item:nth-child(2) { animation-delay: 0.4s; }
+.summary-item:nth-child(3) { animation-delay: 0.5s; }
+.summary-item:nth-child(4) { animation-delay: 0.6s; }
+.summary-item:nth-child(5) { animation-delay: 0.7s; }
+
+.item-info h4 {
+  animation: fadeInUp 0.3s ease;
+}
+
+.item-price {
+  animation: countUp 0.6s ease;
+}
+
+.summary-totals {
+  border-top: 2px solid #e2e8f0;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+  animation: slideInFromBottom 0.5s ease 0.8s both;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  color: #4a5568;
+  animation: slideInFromLeft 0.3s ease;
+}
+
+.total-row:nth-child(1) { animation-delay: 0.9s; }
+.total-row:nth-child(2) { animation-delay: 1s; }
+.total-row:nth-child(3) { animation-delay: 1.1s; }
+.total-row:nth-child(4) { animation-delay: 1.2s; }
+.total-row.final { 
+  animation: countUp 0.5s ease;
+  animation-delay: 1.3s;
+}
+
+/* Checkout success animations */
+.checkout-success {
+  animation: bounceIn 0.8s ease;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.checkout-success::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(72, 187, 120, 0.1), transparent);
+  animation: rotate 10s linear infinite;
+  z-index: -1;
+}
+
+.success-icon {
+  animation: float 3s ease-in-out infinite;
+  position: relative;
+}
+
+.success-icon::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 3px solid rgba(72, 187, 120, 0.3);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.checkout-success h2 {
+  animation: fadeInUp 0.6s ease 0.2s both;
+  color: #38a169;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.checkout-success p {
+  animation: fadeInUp 0.6s ease 0.4s both;
+  color: #718096;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.view-orders-btn {
+  animation: bounceIn 0.6s ease 0.6s both;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-orders-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.view-orders-btn:hover::before {
+  left: 100%;
+}
+
+.view-orders-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+  animation: pulse 0.5s ease;
+}
+
+/* Loading spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Error message animation */
+.error-message {
+  animation: bounceIn 0.5s ease, shake 0.5s ease-in-out;
+}

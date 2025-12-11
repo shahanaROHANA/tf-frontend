@@ -1,0 +1,471 @@
+/* Simple Station Search Styles */
+.simple-station-search {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.search-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.search-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.search-input-section {
+  margin-bottom: 25px;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.station-search-input {
+  flex: 1;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.station-search-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  background: #48bb78;
+  color: white;
+}
+
+.search-button:hover:not(:disabled) {
+  background: #38a169;
+  transform: translateY(-1px);
+}
+
+.search-button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #feb2b2;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.stations-list {
+  margin-bottom: 30px;
+}
+
+.stations-list h3 {
+  margin: 0 0 20px 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+}
+
+.stations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.station-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.station-card:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.station-card.selected {
+  border-color: #667eea;
+  background: #f7fafc;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.station-info h4 {
+  margin: 0 0 10px 0;
+  color: #2d3748;
+  font-size: 1.2rem;
+}
+
+.station-address, .restaurant-count {
+  margin: 5px 0;
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+.restaurants-section {
+  margin-bottom: 30px;
+}
+
+.restaurants-section h3 {
+  margin: 0 0 20px 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+}
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.restaurant-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.restaurant-card:hover {
+  border-color: #48bb78;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.15);
+}
+
+.restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.restaurant-header h4 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+  flex: 1;
+}
+
+.rating {
+  font-size: 0.9rem;
+  color: #f6ad55;
+  font-weight: 600;
+}
+
+.restaurant-address {
+  margin: 5px 0;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.restaurant-status {
+  margin: 5px 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.restaurant-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.view-menu-btn, .view-on-map-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-menu-btn {
+  background: #48bb78;
+  color: white;
+  flex: 1;
+}
+
+.view-menu-btn:hover {
+  background: #38a169;
+}
+
+.view-on-map-btn {
+  background: #667eea;
+  color: white;
+  flex: 1;
+}
+
+.view-on-map-btn:hover {
+  background: #5a67d8;
+}
+
+.restaurant-menu-section {
+  margin-top: 30px;
+}
+
+.menu-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.back-btn {
+  background: #e2e8f0;
+  color: #4a5568;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #cbd5e0;
+}
+
+.menu-header h3 {
+  margin: 10px 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+}
+
+.restaurant-info {
+  color: #718096;
+  margin: 5px 0;
+}
+
+.loading-menu {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-item {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+  border-color: #cbd5e0;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.item-info {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+}
+
+.item-image-container {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h4 {
+  margin: 0 0 8px 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.item-description {
+  margin: 5px 0;
+  color: #718096;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.item-price {
+  margin: 8px 0;
+  font-weight: 700;
+  color: #48bb78;
+  font-size: 1.1rem;
+}
+
+.add-to-cart-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}
+
+.add-to-cart-btn:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.no-restaurants {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+  background: #f7fafc;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+}
+
+.no-restaurants p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.no-restaurants .suggestion-list {
+  margin-top: 20px;
+  text-align: left;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.no-restaurants .suggestion-list ul {
+  margin: 10px 0 0 20px;
+  color: #4a5568;
+}
+
+.no-restaurants .suggestion-list li {
+  margin: 5px 0;
+}
+
+/* Food availability badges */
+.food-available-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #48bb78;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.no-food-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e53e3e;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.station-card {
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .simple-station-search {
+    padding: 15px;
+  }
+
+  .search-header {
+    padding: 20px;
+  }
+
+  .search-header h2 {
+    font-size: 2rem;
+  }
+
+  .search-input-group {
+    flex-direction: column;
+  }
+
+  .stations-grid, .restaurants-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-actions {
+    flex-direction: column;
+  }
+
+  .menu-item-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .item-info {
+    flex-direction: column;
+  }
+}
