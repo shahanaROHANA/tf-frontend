@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@stripe/react-stripe-js": "^5.4.1",
-    "@stripe/stripe-js": "^2.4.0",
+    "@stripe/stripe-js": "^8.5.3",
     "axios": "^1.13.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
